@@ -34,22 +34,19 @@
     </p>
 </div>
 <script type="text/javascript">
-    $(window).on("load",function(){
-        var winHeight = $(window).height();
-        function is_weixin() {
-            var ua = navigator.userAgent.toLowerCase();
-            if (ua.match(/MicroMessenger/i) == "micromessenger") {
-				alert("Y");
-                return true;
-            } else {
-				alert("N");
-                return false;
-            }
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			alert("Y");
+            return true;
+        } else {
+			alert("N");
+            return false;
         }
-        var isWeixin = is_weixin();
-        if(isWeixin){
-            $(".weixin-tip").css("height",winHeight);
-            $(".weixin-tip").show();
-        }
-    })
+    }
+    var isWeixin = is_weixin();
+    if(isWeixin){
+        $(".weixin-tip").css("height",winHeight);
+        $(".weixin-tip").show();
+    }
 </script>

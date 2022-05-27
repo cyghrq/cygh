@@ -4,15 +4,8 @@
         margin:0; 
         padding:0;
     }
-    a{
-        text-decoration: none;
-    }
-    img{
-        max-width: 100%; 
-        height: auto;
-    }
     .weixin-tip{
-        display: none; 
+        display: ; 
         position: fixed; 
         left:0; 
         top:0; 
@@ -39,16 +32,10 @@
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			//alert("Y"); //是微信扫描结果
-			return true;
+			return false;
 		} else {
 			//alert("N"); //不是微信扫描进入
-			return false;
+			window.location.href="http://223.100.226.209:7000/gs/gs.asp";
 		}	
-	}
-    var isWeixin = is_weixin();
-    if(isWeixin){
-        $(".weixin-tip").show();
-    }else{
-		window.location.href="http://223.100.226.209:7000/gs/gs.asp";
 	}
 </script>

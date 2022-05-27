@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="viewport" content="width=device-width,initial-scale=0.6">
+<title>燃气用户服务查询系统</title>
+<script>
+function is_weixin() {
+	var ua = navigator.userAgent.toLowerCase();
+	if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		alert("Y"); //是微信扫描结果
+		return true;
+	} else {
+		alert("N"); //不是微信扫描进入
+		return false;
+	}	
+}
+is_weixin();
+</script>

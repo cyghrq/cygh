@@ -11,7 +11,7 @@
         height: auto;
     }
     .weixin-tip{
-        display: none; 
+        display: ; 
         position: fixed; 
         left:0; 
         top:0; 
@@ -39,8 +39,10 @@
         function is_weixin() {
             var ua = navigator.userAgent.toLowerCase();
             if (ua.match(/MicroMessenger/i) == "micromessenger") {
+				alert("Y");
                 return true;
             } else {
+				alert("N");
                 return false;
             }
         }

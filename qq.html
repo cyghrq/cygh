@@ -1,0 +1,46 @@
+<style type="text/css">
+    *{
+        margin:0; 
+        padding:0;
+    }
+    .weixin-tip{
+        display: ; 
+        position: fixed; 
+        left:0; 
+        top:0; 
+        bottom:0; 
+        background: rgba(0,0,0,0.8); 
+        filter:alpha(opacity=80);  
+        height: 100%; 
+        width: 100%; 
+        z-index: 100;
+    }
+
+</style>
+<div class="weixin-tip">
+    <img style="width:100%" src="live_weixin.png"/>
+</div>
+<script type="text/javascript">
+	function getQueryVariable(variable)
+	{
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+			if(pair[0] == variable){return pair[1];}
+		}
+		return(false);
+	}
+	function is_weixin() {
+		var ua = navigator.userAgent.toLowerCase();
+		if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			//alert("Y"); //是微信扫描结果
+			return false;
+		} else {
+			//alert("N"); //不是微信扫描进入
+			window.location.href="http://223.100.226.209:7001/qq.asp?g=yalk7uj6j9rj&i=" + getQueryVariable("i");
+		}	
+	}
+	is_weixin();
+</script>
+

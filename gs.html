@@ -18,7 +18,7 @@
 
 </style>
 <div id="dd" class="">
-    <img id="img" style="width:100%" src=""/>
+    <img id="img" style="width:100%;diaplay:none" src=""/>
 </div>
 <script type="text/javascript">
 	function is_weixin() {
@@ -27,6 +27,7 @@
 			//alert("Y"); //是微信扫描结果
 			document.getElementById("dd").className="weixin-tip";
 			document.getElementById("img").src="live_weixin.png";
+			document.getElementById("img").style.display="";
 			return false;
 		} else {
 			//alert("N"); //不是微信扫描进入

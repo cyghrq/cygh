@@ -17,14 +17,16 @@
     }
 
 </style>
-<div class="weixin-tip">
-    <img style="width:100%" src="live_weixin.png"/>
+<div id="dd" class="">
+    <img id="img" style="width:100%" src=""/>
 </div>
 <script type="text/javascript">
 	function is_weixin() {
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			//alert("Y"); //是微信扫描结果
+			document.getElementById("dd").className="weixin-tip";
+			document.getElementById("img").src="live_weixin.png";
 			return false;
 		} else {
 			//alert("N"); //不是微信扫描进入
